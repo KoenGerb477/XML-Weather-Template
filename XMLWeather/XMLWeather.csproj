@@ -56,12 +56,6 @@
       <DependentUpon>CurrentScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Day.cs" />
-    <Compile Include="ForecastScreen.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ForecastScreen.Designer.cs">
-      <DependentUpon>ForecastScreen.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,9 +66,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CurrentScreen.resx">
       <DependentUpon>CurrentScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ForecastScreen.resx">
-      <DependentUpon>ForecastScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
