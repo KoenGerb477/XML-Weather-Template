@@ -11,6 +11,11 @@ using System.Xml;
 
 namespace XMLWeather
 {
+    /*
+     * Koen Gerber
+     * April 22, 2024
+     * Weather App
+     */
     public partial class Form1 : Form
     {
         public static List<Day> days = new List<Day>();
@@ -22,7 +27,7 @@ namespace XMLWeather
 
             ExtractForecast();
             ExtractCurrent();
-            
+
             // open weather screen for todays weather
             CurrentScreen cs = new CurrentScreen();
             this.Controls.Add(cs);
@@ -39,7 +44,7 @@ namespace XMLWeather
 
                 //fill day object with required data
                 reader.ReadToFollowing("time");
-                d.date=reader.GetAttribute("day");
+                d.date = reader.GetAttribute("day");
 
                 reader.ReadToFollowing("symbol");
                 d.condition = reader.GetAttribute("number");

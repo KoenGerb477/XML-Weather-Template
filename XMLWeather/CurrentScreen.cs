@@ -9,6 +9,12 @@ using System.Windows.Forms;
 
 namespace XMLWeather
 {
+    /*
+     * Koen Gerber
+     * April 22, 2024
+     * Weather App
+     */
+
     public partial class CurrentScreen : UserControl
     {
         //lists and variables to store cloud information for the animation
@@ -210,7 +216,7 @@ namespace XMLWeather
             currentPictureBox.BackgroundImage = currentImage;
 
             //date
-            if(DateTime.Now.Month == 1)
+            if (DateTime.Now.Month == 1)
             {
                 dayLabel.Text = "Jan.";
             }
@@ -266,7 +272,7 @@ namespace XMLWeather
         public void DisplayForecast()
         {
             //for the next six days display info
-            for(int i = 0; i < 6; i++)
+            for (int i = 0; i < 6; i++)
             {
                 //decimal remover is a variable for temporary storage of data so that less decimals can be shown
                 //Temperatures
@@ -314,7 +320,7 @@ namespace XMLWeather
                 }
                 else
                 {
-                   image = rainy;
+                    image = rainy;
                 }
 
                 iconBoxes[i].BackgroundImage = image;
@@ -343,7 +349,7 @@ namespace XMLWeather
             {
                 e.Graphics.FillEllipse(new SolidBrush(Color.FromArgb(100, precipitationColour)), rainList[i].X, rainList[i].Y, rainSize, rainSize + 10);
             }
-      }
+        }
 
         private void cloudTimer_Tick(object sender, EventArgs e)
         {
@@ -358,7 +364,7 @@ namespace XMLWeather
                 Point cloud = new Point(x, y);
                 cloudList.Add(cloud);
                 cloudSpeedList.Add(random.Next(1, 3));
-                
+
                 List<Color> colors = new List<Color>();
 
                 Random rand = new Random();
@@ -429,7 +435,7 @@ namespace XMLWeather
         private void searchButton_Click(object sender, EventArgs e)
         {
             Form1.days.Clear();
-            
+
             Form1.searchInputText = searchInput.Text;
 
             //try to change all the data, but if it doesnt work, display error and do nothing
